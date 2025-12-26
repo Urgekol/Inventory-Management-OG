@@ -1,0 +1,145 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+);
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: 0.2px;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 95px;
+  height: 95px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-family: Poppins, sans-serif;
+  font-size: 29px;
+  font-weight: 600;
+  color: #111;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+}
+
+.icons i {
+  cursor: pointer;
+  font-size: 20px;
+  color: #777;
+  transition: 0.25s;
+}
+
+.icons i:hover {
+  color: #000;
+}
+
+.container {
+  width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.search-section input {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-btn {
+  background: #1a73e8;
+  border: none;
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.add-btn:hover {
+  background: #155fc2;
+}
+
+.inventory-table {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.inventory-table th {
+  text-align: left;
+  padding: 14px;
+  background: #e8eef5;
+}
+
+.inventory-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.guitar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.color-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 1px solid #ccc;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+}

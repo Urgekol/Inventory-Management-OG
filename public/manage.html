@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Manage Inventory</title>
+        <link rel="stylesheet" href="manage_design.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    </head>
+    <body>
+
+        <header class="menu">
+
+            <div class="logo-container">
+                <img src="Guitar_Emporium.png" alt="Logo" class="logo" />
+                <h1 class="brand-name">Guitar Emporium</h1>
+            </div>
+
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+        </header>
+
+        <div class="main">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Management</span>
+            </div>
+
+            <div class="container">
+                <div class="search-section">
+                    <input id="searchInput" type="text" placeholder="Search by the name of the guitar...">
+                    <a href="add_index.html"><button id="addGuitarButton" class="add-btn">Add New Guitar</button></a>
+                </div>
+
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Colors</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="guitarTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="manage.js"></script>
+
+    </body>
+</html>

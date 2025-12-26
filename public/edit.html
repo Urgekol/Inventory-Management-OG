@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Guitar</title>
+
+    <link rel="stylesheet" href="edit_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  </head>
+
+  <body>
+
+    <div class="add_guitar_container">
+      <div class="heading">Edit Guitar</div>
+
+      <!-- General Details -->
+      <div class="form-section">
+        <h2>General Details</h2>
+
+        <div class="form-group">
+          <label for="nameOfGuitar">Name of the Guitar</label>
+          <input type="text" id="nameOfGuitar">
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" id="price">
+        </div>
+
+        <div class="form-group">
+          <label for="topMaterial">Top Material</label>
+          <input type="text" id="topMaterial">
+        </div>
+
+        <div class="form-group">
+          <label for="backNeckMaterial">Back and Neck Material</label>
+          <input type="text" id="backNeckMaterial">
+        </div>
+
+        <div class="form-group">
+          <label for="fingerboardBridgeMaterial">Fingerboard and Bridge Material</label>
+          <input type="text" id="fingerboardBridgeMaterial">
+        </div>
+
+        <div class="form-group">
+          <label for="warranty">Warranty</label>
+          <input type="text" id="warranty">
+        </div>
+
+        <div class="form-group">
+          <label for="bodyShape">Body Shape</label>
+          <input type="text" id="bodyShape">
+        </div>
+      </div>
+
+      <!-- Color Variants -->
+      <div class="form-section">
+        <h2>Color Variants</h2>
+
+        <button id="addColorBtn" class="add-color-btn">Add Color</button>
+
+        <div id="colorContainer" class="color-container"></div>
+      </div>
+
+      <!-- Guitar Specs -->
+      <div class="form-section">
+        <h2>Guitar Specs</h2>
+
+        <div class="form-grid">
+          <div class="form-group"><label for="scaleLength">Scale Length</label><input type="text" id="scaleLength"></div>
+          <div class="form-group"><label for="bodyLength">Body Length</label><input type="text" id="bodyLength"></div>
+          <div class="form-group"><label for="totalLength">Total Length</label><input type="text" id="totalLength"></div>
+          <div class="form-group"><label for="bodyWidth">Body Width</label><input type="text" id="bodyWidth"></div>
+          <div class="form-group"><label for="bodyDepth">Body Depth</label><input type="text" id="bodyDepth"></div>
+          <div class="form-group"><label for="nutWidth">Nut Width</label><input type="text" id="nutWidth"></div>
+          <div class="form-group"><label for="stringSpacing">String Spacing</label><input type="text" id="stringSpacing"></div>
+          <div class="form-group"><label for="sideMaterial">Side Material</label><input type="text" id="sideMaterial"></div>
+          <div class="form-group"><label for="fingerboardRadius">Fingerboard Radius</label><input type="text" id="fingerboardRadius"></div>
+          <div class="form-group"><label for="nutMaterial">Nut Material</label><input type="text" id="nutMaterial"></div>
+          <div class="form-group"><label for="saddleMaterial">Saddle Material</label><input type="text" id="saddleMaterial"></div>
+          <div class="form-group"><label for="bridgePins">Bridge Pins</label><input type="text" id="bridgePins"></div>
+          <div class="form-group"><label for="tuners">Tuners</label><input type="text" id="tuners"></div>
+          <div class="form-group"><label for="bodyBinding">Body Binding</label><input type="text" id="bodyBinding"></div>
+          <div class="form-group"><label for="soundholeInlay">Soundhole Inlay</label><input type="text" id="soundholeInlay"></div>
+          <div class="form-group"><label for="pickguard">Pickguard</label><input type="text" id="pickguard"></div>
+          <div class="form-group"><label for="bodyFinish">Body Finish</label><input type="text" id="bodyFinish"></div>
+          <div class="form-group"><label for="neckFinish">Neck Finish</label><input type="text" id="neckFinish"></div>
+          <div class="form-group"><label for="electronics">Electronics</label><input type="text" id="electronics"></div>
+          <div class="form-group"><label for="controls">Controls</label><input type="text" id="controls"></div>
+          <div class="form-group"><label for="connections">Connections</label><input type="text" id="connections"></div>
+          <div class="form-group"><label for="strings">Strings</label><input type="text" id="strings"></div>
+          <div class="form-group"><label for="accessories">Accessories</label><input type="text" id="accessories"></div>
+          <div class="form-group"><label for="case">Case</label><input type="text" id="case"></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div style="margin-top:20px; display:flex; gap:15px;">
+        <button id="saveBtn" class="add-btn">Save Changes</button>
+        <button id="cancelBtnMain" class="add-btn" style="background:#d33;">Cancel</button>
+      </div>
+
+    </div>
+
+
+    <!-- COLOR PICKER POPUP: Styled with otherCode.css -->
+    <div class="color-picker-overlay" id="colorPickerOverlay">
+
+      <div class="color-picker">
+        <h2>Color Picker</h2>
+
+        <div class="section">
+          <label>Red</label>
+          <input type="range" id="redRange" min="0" max="255" value="128">
+          <span id="redVal">128</span>
+        </div>
+
+        <div class="section">
+          <label>Green</label>
+          <input type="range" id="greenRange" min="0" max="255" value="128">
+          <span id="greenVal">128</span>
+        </div>
+
+        <div class="section">
+          <label>Blue</label>
+          <input type="range" id="blueRange" min="0" max="255" value="128">
+          <span id="blueVal">128</span>
+        </div>
+
+        <div class="preview-container">
+          <div class="preview" id="colorPreview"></div>
+          <input type="text" id="hexCode" value="#808080">
+        </div>
+
+        <p id="rgbText">RGB(128, 128, 128)</p>
+
+        <div class="footer">
+          <button id="cancelBtn">Cancel</button>
+          <button id="getColorBtn">Get Color</button>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="edit.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login – GuitarVerse</title>
+
+    <link rel="stylesheet" href="logIn_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Prevent flash before auth check -->
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- LEFT PANEL -->
+      <div class="left">
+        <div class="left-text">
+          <h1>Welcome Back Guitarist</h1>
+          <p>
+            Continue mastering chords, riffs, and soulful melodies with
+            GuitarVerse.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right">
+        <form id="form-box" class="form-box" autocomplete="off">
+          <div class="title-bar">
+            <h2>Login</h2>
+            <p class="subtitle">
+              Access your personalized guitar dashboard.
+            </p>
+          </div>
+
+          <label>Your Email</label>
+          <input
+            id="liEmail"
+            type="email"
+            placeholder="Enter email"
+            required
+          />
+
+          <label>Your Password</label>
+          <div class="password-container">
+            <input
+              id="liPass"
+              type="password"
+              placeholder="Enter password"
+              required
+            />
+            <span id="toggleLiPass">
+              <i class="fa-regular fa-eye"></i>
+            </span>
+          </div>
+
+          <button type="submit" class="primary-btn" id="primary-btn">
+            Login
+          </button>
+
+          <div class="divider">or continue with</div>
+
+          <button type="button" class="google-btn" id="google-btn">
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+            />
+            Login with Google
+          </button>
+
+          <p class="login-text">
+            Don’t have an account?
+            <a href="SIGN_IN_PAGE.html">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- SINGLE source of auth logic -->
+    <script type="module" src="LOGIN_PAGE.js"></script>
+  </body>
+</html>

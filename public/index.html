@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitar Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+  </head>
+
+  <body>
+    
+    <header class="menu">
+
+      <div class="logo-container">
+        <img src="Guitar_Emporium.png" alt="Logo" class="logo" />
+        <h1 class="brand-name">Guitar Emporium</h1>
+      </div>
+
+      <div class="icons">
+        
+        <i class="fa-solid fa-user" id="profile_me"></i>
+        <div class="cart-icon-wrapper" onclick="window.location.href='cart.html'">
+          <i class="fa-solid fa-cart-flatbed"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </div>
+
+      </div>
+
+    </header>
+
+    <div class="profile-popup" id="profilePopup">
+      <p class="user-name" id="userName">Loading...</p>
+      <button id="signOutBtn">Sign Out</button>
+    </div>
+
+    <main>
+      <div class="wrapper_panel">
+
+        <div class="container_sidePanel">
+
+          <div class="color_menu">
+            <div class="face face1">
+              <div class="heading">
+                <span>Color</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+              <div class="color_range"></div>
+            </div>
+          </div>
+
+          <div class="range_menu">
+            <div class="face face1">
+              <div class="heading">
+                <span>Price</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+              <div class="price-input">
+                <div class="field">
+                  <span>Min</span>
+                  <input type="number" class="input-min" value="0" min="0" />
+                </div>
+
+                <div class="separator">-</div>
+
+                <div class="field">
+                  <span>Max</span>
+                  <input type="number" class="input-max" min="0" />
+                </div>
+              </div>
+
+              <div class="slider">
+                <div class="progress"></div>
+              </div>
+
+              <div class="range-input">
+                <input type="range" class="range-min" min="0" value="0" />
+                <input type="range" class="range-max" min="0" />
+              </div>
+            </div>
+          </div>
+
+          <div class="checkbox_menu top-material_menu">
+            
+            <div class="face face1">
+              <div class="heading">
+                <span>Top Material</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+
+            </div>
+    
+          </div>
+
+          <div class="checkbox_menu body-shape_menu">
+            
+            <div class="face face1">
+              <div class="heading">
+                <span>Body Shape</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+
+            </div>
+    
+          </div>
+
+          <div class="checkbox_menu body-finish_menu">
+
+            <div class="face face1">
+              <div class="heading">
+                <span>Body Finish</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+
+            </div>
+
+          </div>
+
+          <div class="checkbox_menu case_menu">
+
+            <div class="face face1">
+              <div class="heading">
+                <span>Case</span>
+                <div class="arrow_toggle">
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="face face2">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="container_addMenu">
+
+          <a href="add_index.html" target="_self" rel="noopener noreferrer">
+            <div class="addNew">
+              <div class="plusCircle">
+                <i class="fa-solid fa-plus" style="color: #ffffff"></i>
+              </div>
+              <span>Add New Item</span>
+            </div>
+          </a>
+
+          <a href="manage.html" target="_self" rel="noopener noreferrer">
+            <div class="manage">
+              <div class="plusCircle">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <span>Manage Inventory</span>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+
+      <div class="div_contain"></div>
+    </main>
+
+    <script type="module" src="index.js"></script>
+    
+  </body>
+</html>

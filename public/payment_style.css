@@ -1,0 +1,198 @@
+@import url(
+  "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+);
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: 0.2px;
+  background-color: rgb(230, 228, 228);
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 95px;
+  height: 95px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-family: Poppins, sans-serif;
+  font-size: 29px;
+  font-weight: 600;
+  color: #111;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+}
+
+.icons i {
+  cursor: pointer;
+  font-size: 20px;
+  color: #777;
+  transition: 0.25s;
+}
+
+.icons i:hover {
+  color: #000;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.payment-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.payment-section h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="date"] {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  background-color: #706969;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #4f4f4f;
+  transform: translateY(-2px);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Loader animation */
+.loader {
+  width: 55px;
+  height: 55px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #555;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Payment Status Box */
+.status-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  z-index: 3000;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.status-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.success {
+  background: #2ecc71;
+  color: white;
+}
+
+.cancel {
+  background: #e74c3c;
+  color: white;
+}
